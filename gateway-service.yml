@@ -8,6 +8,8 @@ spring:
           issuer-uri: http://localhost:8080/realms/lucia
   cloud:
     gateway:
+      default-filters: 
+        - TokenRelay=
       mvc:
         routes:
           - id: checkout-service
